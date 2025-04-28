@@ -1,0 +1,388 @@
+﻿@page
+@using ClassLib.Classes
+@model WebApp.Pages.AccountModel
+@{
+    ViewData["Title"] = "Account";
+
+    if (Model.loggedin == true)
+    {
+        Layout = "Shared/_LayoutLoggedin.cshtml";
+    }
+    else
+    {
+        Layout = "Shared/_Layout.cshtml";
+    }
+}
+<partial name="_ValidationScriptsPartial" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<div class="container">
+<span class="text-danger">@TempData["message"]</span>
+<div class="row gutters-sm">
+<div class="col-md-4 d-none d-md-block">
+    <div class="card">
+        <div class="card-body">
+            <nav class="nav flex-column nav-pills nav-gap-y-1">
+                <a href="#profile" data-bs-toggle="tab" class="nav-item nav-link has-icon nav-link-faded active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                    </svg>Profile Information
+                </a>
+                        <a href="#house" data-bs-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                    </svg>My House
+                </a>
+                        <a href="#favorites" data-bs-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-heart" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"/>
+                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                    </svg>My Favorites
+                </a>
+                        <a href="#addHouse" data-bs-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5"/>
+                        <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                        <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                    </svg>Add house
+                </a>
+                
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!--NAVIGATION-->
+<div class="col-md-8">
+    <div class="card">
+        <div class="card-header border-bottom mb-3 d-flex d-md-none">
+            <ul class="nav nav-tabs card-header-tabs nav-gap-x-1" role="tablist">
+                <li class="nav-item">
+                            <a href="#profile" data-bs-toggle="tab" class="nav-link has-icon active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-item">
+                            <a href="#house" data-bs-toggle="tab" class="nav-link has-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-item">
+                            <a href="#favorites" data-bs-toggle="tab" class="nav-link has-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></a>
+                </li>
+                <li class="nav-item">
+                            <a href="#addHouse" data-bs-toggle="tab" class="nav-link has-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-plus" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5"/>
+                        <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                        <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                    </svg></a>
+                </li>
+                
+            </ul>
+        </div>
+
+        <!--PROFILE INFORMATION-->
+        <div class="card-body tab-content">
+            <div class="tab-pane active" id="profile">
+                <h6>YOUR PROFILE INFORMATION</h6>
+                <hr>
+                <form asp-controller="Account" asp-action="AccountInfoForm" method="post">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" name="userName" aria-describedby="fullNameHelp" placeholder="Enter your fullname" value="@Model.loggedinUser.GetName()" disabled>
+                        <small id="fullNameHelp" class="form-text text-muted">Contact an admin to change.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email" value="@Model.loggedinUser.GetEmail()" disabled>
+                        <small id="emailHelp" class="form-text text-muted">Contact an admin to change.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Type of account</label>
+                        <input type="text" class="form-control" id="type" aria-describedby="typeHelp" placeholder="Enter your type" value="@Model.loggedinUser.GetAccountType()" disabled>
+                        <small id="typeHelp" class="form-text text-muted">Contact an admin to change.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="Phonenumber">Phonenumber</label>
+                        <input type="text" class="form-control" id="phonenumber" aria-describedby="phonenumberHelp" placeholder="Enter your phonenumber" value="@Model.loggedinUser.GetPhoneNumber()" disabled>
+                        <small id="phonenumberHelp" class="form-text text-muted">Contact an admin to change.</small>
+                    </div>
+                    <a type="button" asp-page="/Logout" class="btn btn-danger">Log out</a>
+                </form>
+            </div>
+                <!-- My house-->
+                <div class="tab-pane" id="house">
+                @if (Model.loggedinUser is Admin)
+                {
+                    <h6>My house</h6>
+                    <hr>
+                    <div class="adminHouse">
+                        <span>Admins dont have houses</span>
+                    </div>
+                }
+                else
+                {
+                    @if (Model.loggedinUser is PrivateSeller)
+                    {
+                        <h6>My house</h6>
+                        <hr>
+                        <a class="houseCard similar-text" asp-page="/EditListing" asp-route-id="@Model.myHouse.GetHouseId()">
+                            <div class="d-flex mb-3">
+                                <div class="lft">
+                                    <img src="~/images/house/@Model.myHouse.GetHouseId().ToString()/@Model.myHouse.GetHouseId().ToString()_1.jpg"/>
+                                    <div class="info sim-info">
+                                        <span class="similar-600">@Model.myHouse.GetAddress()</span>
+                                        <span class="similar-600">&#8364;@Model.myHouse.FormattedPrice(),-</span>
+                                        <p class="card-text">
+                                            <span class="info fa-small fa-padding"><i class="fa-solid fa-expand"></i>@Model.myHouse.GetSqMLiving().ToString()</span>
+                                            <span class="info fa-small fa-padding"><i class="fa-solid fa-bed"></i>@Model.myHouse.GetBedrooms().ToString()</span>
+                                            <span class="info fa-small fa-padding"><i class="fa-solid fa-bath"></i>@Model.myHouse.GetBathrooms().ToString()</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="close_button">
+                                    <form method="post">
+                                        <input type="hidden" name="houseId" value="@Model.myHouse.GetHouseId()"/>
+                                        <button type="submit" asp-page-handler="DeleteHouse" class="btn-close" aria-label="Close"></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </a>
+                    }
+                    else
+                    {
+                        <h6>My houses</h6>
+                        <hr>
+                        @foreach (var house in Model.myHouses)
+                        {
+
+                            <a class="houseCard similar-text" asp-page="/EditListing" asp-route-id="@house.GetHouseId()">
+                                <div class="d-flex mb-3">
+                                    <div class="lft">
+                                        <img src="~/images/house/@house.GetHouseId().ToString()/@house.GetHouseId().ToString()_1.jpg"/>
+                                        <div class="info sim-info">
+                                            <span class="similar-600">@house.GetAddress()</span>
+                                            <span class="similar-600">&#8364;@house.FormattedPrice(),-</span>
+                                            <p class="card-text">
+                                                <span class="info fa-small fa-padding"><i class="fa-solid fa-expand"></i>@house.GetSqMLiving().ToString()</span>
+                                                <span class="info fa-small fa-padding"><i class="fa-solid fa-bed"></i>@house.GetBedrooms().ToString()</span>
+                                                <span class="info fa-small fa-padding"><i class="fa-solid fa-bath"></i>@house.GetBathrooms().ToString()</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="close_button">
+                                        <form method="post">
+                                            <input type="hidden" name="houseId" value="@house.GetHouseId()"/>
+                                            <button type="submit" asp-page-handler="DeleteHouse" class="btn-close" aria-label="Close"></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        }
+                    }
+                }
+                </div>
+                
+                <!--My favorites-->
+                <div class="tab-pane" id="favorites">
+                    <h6>MY FAVORITES</h6>
+                    <hr>
+                    @foreach (var favHouse in Model.userFavs)
+                    {
+                        <a class="houseCard similar-text" asp-page="/HouseDetails" asp-route-id="@favHouse.GetHouseId()">
+                            <div class="d-flex mb-3">
+                                <div class="lft">
+                                    <img src="~/images/house/@favHouse.GetHouseId().ToString()/@favHouse.GetHouseId().ToString()_1.jpg"/>
+                                    <div class="info sim-info">
+                                        <span class="similar-600">@favHouse.GetAddress()</span>
+                                        <span class="similar-600">&#8364;@favHouse.FormattedPrice(),-</span>
+                                        <p class="card-text">
+                                            <span class="info fa-small fa-padding"><i class="fa-solid fa-expand"></i>@favHouse.GetSqMLiving().ToString()</span>
+                                            <span class="info fa-small fa-padding"><i class="fa-solid fa-bed"></i>@favHouse.GetBedrooms().ToString()</span>
+                                            <span class="info fa-small fa-padding"><i class="fa-solid fa-bath"></i>@favHouse.GetBathrooms().ToString()</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="close_button">
+                                    <form method="post">
+                                        <input type="hidden" name="houseId" value="@favHouse.GetHouseId()"/>
+                                        <input type="hidden" name="ownerId" value="@Model.loggedinUser.GetId()"/>
+                                        <button type="submit" asp-page-handler="DeleteFav" class="btn-close" aria-label="Close"></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </a>
+                    }
+                </div>
+                <!--Add listing-->
+                <div class="tab-pane" id="addHouse">
+                    <h6>Add a house</h6>
+                    <hr>
+
+                    <div class="form">
+                        <form class="edithouse" method="post" enctype="multipart/form-data">
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                    <label asp-for="NewHouse.Price">New price</label>
+                                    <span asp-validation-for="NewHouse.Price"></span>
+                                    <input type="number" asp-for="NewHouse.Price"/>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                    <label asp-for="NewHouse.Address">New address</label>
+                                    <span asp-validation-for="NewHouse.Address"></span>
+                                    <input type="text" asp-for="NewHouse.Address"/>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                    <label asp-for="NewHouse.City">New city</label>
+                                    <span asp-validation-for="NewHouse.City"></span>
+                                    <input type="text" asp-for="NewHouse.City"/>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                    <label asp-for="NewHouse.SqmLiving">New SqmLiving</label>
+                                    <span asp-validation-for="NewHouse.SqmLiving"></span>
+                                    <input type="number" asp-for="NewHouse.SqmLiving"/>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                    <label asp-for="NewHouse.SqmProperty">New SqmProperty</label>
+                                    <span asp-validation-for="NewHouse.SqmProperty"></span>
+                                    <input type="number" asp-for="NewHouse.SqmProperty"/>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                    <label asp-for="NewHouse.Volume">New volume</label>
+                                    <span asp-validation-for="NewHouse.Volume"></span>
+                                    <input type="number" asp-for="NewHouse.Volume"/>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                    <label asp-for="NewHouse.Bedrooms">New bedrooms</label>
+                                    <span asp-validation-for="NewHouse.Bedrooms"></span>
+                                    <input type="number" asp-for="NewHouse.Bedrooms"/>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                    <label asp-for="NewHouse.Bathrooms">New bathrooms</label>
+                                    <span asp-validation-for="NewHouse.Bathrooms"></span>
+                                    <input type="number" asp-for="NewHouse.Bathrooms"/>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                    <label asp-for="NewHouse.Floors">New floors</label>
+                                    <span asp-validation-for="NewHouse.Floors"></span>
+                                    <input type="number" asp-for="NewHouse.Floors"/>
+                                </div>
+                            </div>
+
+                            <label asp-for="NewHouse.EnergyLabel">EnergyLabel</label>
+                            <select asp-for="NewHouse.EnergyLabel" asp-items="Html.GetEnumSelectList<EnergyLabel>()"></select>
+                            <span asp-validation-for="NewHouse.EnergyLabel"></span>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                    <label asp-for="NewHouse.Description">New description</label>
+                                    <span asp-validation-for="NewHouse.Description"></span>
+                                    <input type="text" asp-for="NewHouse.Description"/>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                    <label asp-for="NewHouse.ConstructionYear">New Construction Year</label>
+                                    <span asp-validation-for="NewHouse.ConstructionYear"></span>
+                                    <input type="number" asp-for="NewHouse.ConstructionYear"/>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                    <label asp-for="NewHouse.Type">New Type</label>
+                                    <span asp-validation-for="NewHouse.Type"></span>
+                                    <input type="text" asp-for="NewHouse.Type"/>
+                                </div>
+                            </div>
+
+                            <label asp-for="NewHouse.IsSold">Status</label>
+                            <select asp-for="NewHouse.IsSold">
+                                <option value="True">Sold</option>
+                                <option value="False">Available</option>
+                            </select>
+                            <span asp-validation-for="NewHouse.IsSold"></span>
+
+                            <div class="form-group">
+                                <label for="images">Images</label>
+                                <input type="file" name="images" class="form-control" multiple accept=".jpg, .jpeg"/>
+                            </div>
+                            <br/>
+                            <input type="submit" value="Submit" asp-page-handler="NewHouse"/>
+                        </form>
+
+                    </div>
+                </div>
+                </div>
+    </div>
+</div>
+</div>
+
+</div>
+
+                                
+<style>
+    .houseCard img{
+        width: 100px;
+        height: auto;
+    }
+    .lft{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .close_button{
+        color: red !important;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding-left: 150px;
+    }
+
+    .d-flex{
+        justify-content:space-between;
+    }
+</style>

@@ -1,0 +1,286 @@
+﻿@page
+@using ClassLib.Classes
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using ClassLib.Features;
+@using ClassLib.Interfaces
+@model WebApp.Pages.houseDetailsModel
+@{
+    ViewData["Title"] = "house details";
+
+    if (@Model.loggedin == true)
+    {
+        Layout = "Shared/_LayoutLoggedin.cshtml";
+    }
+    else
+    {
+        Layout = "Shared/_Layout.cshtml";
+    }
+}
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<section class="py-5">
+    <div class="container">
+        <div class="row gx-5">
+            <aside class="col-lg-6">
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper detailGal2">
+                    <div class="swiper-wrapper">
+                        @foreach (var item in Model.houseImages)
+                        {
+                            <a data-fancybox="gallery" data-src="@Model.imageFolderPath/@item" class="swiper-slide">
+                                <img src="@Model.imageFolderPath/@item"/>
+                            </a>
+                        }
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+                <div thumbsSlider="" class="swiper detailGal">
+                    <div class="swiper-wrapper">
+                        @foreach (var item in Model.houseImages)
+                        {
+                            <div class="swiper-slide">
+                                <img src="@Model.imageFolderPath/@item"/>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+
+                <script>
+                    var detailGal = new Swiper(".detailGal", {
+                        spaceBetween: 10,
+                        slidesPerView: 4,
+                    });
+                    var detailGal2 = new Swiper(".detailGal2", {
+                        spaceBetween: 10,
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                        thumbs: {
+                            swiper: detailGal,
+                        },
+                    });
+
+                    Fancybox.bind('[data-fancybox="gallery"]', {
+                        //
+                    });
+                </script>
+            </aside>
+            <main class="col-lg-6">
+                <div class="ps-lg-3">
+                    <h4 class="title text-dark">
+                        @Model.house.GetAddress()
+                    </h4>
+                    <span>@Model.house.GetCity()</span>
+                    <div class="mb-3">
+                        <span class="h5">&#8364;@Model.house.FormattedPrice(),-</span>
+                    </div>
+
+                    <div class="row">
+                        <dt class="col-6">Square meter Living:</dt>
+                        <dd class="col-6">@Model.house.GetSqMLiving()<small><small>m2</small></small></dd>
+
+                        <dt class="col-6">Square meter Property:</dt>
+                        <dd class="col-6">@Model.house.GetSqMProperty()<small><small>m2</small></small></dd>
+
+                        <dt class="col-6">Bedrooms:</dt>
+                        <dd class="col-6">@Model.house.GetBedrooms()</dd>
+
+                        @if (Model.house is Villa) //Could also just to @house.GetType()
+                        {
+                            <dt class="col-6">Type:</dt>
+                            <dd class="col-6">Villa</dd>
+                        }
+                        else if (Model.house is Penthouse)
+                        {
+                            <dt class="col-6">Type:</dt>
+                            <dd class="col-6">Penthouse</dd>
+                        }
+                        else
+                        {
+                            <dt class="col-6">Type:</dt>
+                            <dd class="col-6">N/A</dd>
+                        }
+
+
+                    </div>
+
+                    <hr/>
+                    <div class="px-0 border rounded-2 shadow-0">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Sellers information:</h5>
+                                <div class="d-flex mb-3">
+                                    <div class="info">
+                                        <h5>@Model.house.GetOwnerName()</h5>
+                                        <br>
+                                        <span>@Model.house.GetOwnerPhone()</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="px-01 rounded-2 shadow-0">
+                        <form method="post">
+                            <input type="hidden" id="houseId" name="houseId" value="@Model.house.GetHouseId()"/>
+                            <button type="submit" class="btn btn-success" asp-page-handler="AddFavorite">Add to favorites</button>
+                        </form>
+                        <span class="text-danger">@TempData["message"]</span>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light border-top py-4">
+    <div class="container">
+        <div class="row gx-4">
+            <div class="col-lg-8 mb-4">
+                <div class="border rounded-2 px-3 py-2 bg-white">
+                    
+                    <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+                        <li class="nav-item d-flex" role="presentation">
+                            <span class="nav-link d-flex align-items-center justify-content-start w-100 no-padd">Description</span>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="ex1-content">
+                        <div class="tab-pane fade show active" aria-labelledby="ex1-tab-1">
+                            <p>
+                                @Model.house.GetDescription()
+                            </p>
+                            <table class="table border mt-3 mb-2">
+                                <tr>
+                                    <th class="py-2">Asking price:</th>
+                                    <td class="py-2">&#8364;@Model.house.FormattedPrice(),-</td>
+                                </tr>
+                                <tr>
+                                    <th class="py-2">Price per m2:</th>
+                                    <td class="py-2">&#8364;@Model.house.PricePerM2(),-</td>
+                                </tr>
+                                <tr>
+                                    <th class="py-2">Still available:</th>
+                                    <td class="py-2">@Model.house.IsSold()</td>
+                                </tr>
+                                
+                                <tr>
+                                    <th class="py-2">Square meter living:</th>
+                                    <td class="py-2">@Model.house.GetSqMLiving()<sup>m2</sup></td>
+                                </tr>
+                                <tr>
+                                    <th class="py-2">Square meter property:</th>
+                                    <td class="py-2">@Model.house.GetSqMProperty()<sup>m2</sup></td>
+                                </tr>
+                                <tr>
+                                    <th class="py-2">Volume:</th>
+                                    <td class="py-2">@Model.house.GetVolume()<sup>m3</sup></td>
+                                </tr>
+                                <tr>
+                                    <th class="py-2">Bedrooms:</th>
+                                    <td class="py-2">@Model.house.GetBedrooms()</td>
+                                </tr>
+                                <tr>
+                                    <th class="py-2">Bathrooms:</th>
+                                    <td class="py-2">@Model.house.GetBathrooms()</td>
+                                </tr>
+                                <tr>
+                                    <th class="py-2">Amount of floors:</th>
+                                    <td class="py-2">@Model.house.GetFloors()</td>
+                                </tr>
+                                <tr>
+                                    <th class="py-2">Energy label:</th>
+                                    <td class="py-2">@Model.house.GetEnergyLabel()</td>
+                                </tr>
+                                <tr>
+                                    <th class="py-2">Construction Year:</th>
+                                    <td class="py-2">@Model.house.GetConstructionYear()</td>
+                                </tr>
+                                <tr>
+                                    <th class="py-2">Energy Usage:</th>
+                                    <td class="py-2">@Model.EnergyString</td>
+                                </tr>
+                                <tr>
+                                    <th class="py-2">Area space:</th>
+                                    <td class="py-2">@Model.AreaString</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="px-0 border rounded-2 shadow-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title card-padding">Similar houses</h5>
+                            
+                            @foreach(var simHouse in Model.similarHouses)
+                            {
+                                <a class="houseCard similar-text" asp-page="/HouseDetails" asp-route-id="@simHouse.GetHouseId()">
+                                <div class="d-flex mb-3">
+                                        <img src="~/images/house/@simHouse.GetHouseId().ToString()/@simHouse.GetHouseId().ToString()_1.jpg" />
+                                    <div class="info sim-info">
+                                        <span class="similar-600">@simHouse.GetAddress()</span>
+                                        <span class="similar-600">&#8364;@simHouse.FormattedPrice(),-</span>
+                                        <p class="card-text">
+                                                <span class="info fa-small fa-padding"><i class="fa-solid fa-expand"></i>@simHouse.GetSqMLiving().ToString()</span>
+                                                <span class="info fa-small fa-padding"><i class="fa-solid fa-bed"></i>@simHouse.GetBedrooms().ToString()</span>
+                                                <span class="info fa-small fa-padding"><i class="fa-solid fa-bath"></i>@simHouse.GetBathrooms().ToString()</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .sim-info{
+        max-width:90%;
+        padding-left:10px;
+        display: flex;
+        flex-direction:column;
+    }
+
+    .card-padding{
+        padding-bottom: 10px!important;
+    }
+
+    .similar-text{
+        color:black!important;
+        text-decoration:none!important;
+    }
+
+    .similar-600{
+        font-weight: 600;
+    }
+
+    .fa-small{
+        font-size:14px!important;
+    }
+
+    .fa-padding, .fa-padding i{
+        padding-right: 5px;
+    }
+
+    .fa-solid{
+        color: #08213f;
+    }
+
+    .houseCard img{
+        width: 100px;
+        height: auto;
+    }
+</style>

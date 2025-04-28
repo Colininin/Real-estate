@@ -1,0 +1,328 @@
+﻿@page
+@model WebApp.Pages.ListingsModel
+@{
+    ViewData["Title"] = "Available Houses";
+
+    if (@Model.loggedin == true)
+    {
+        Layout = "Shared/_layoutLoggedin.cshtml";
+    }
+    else
+    {
+        Layout = "Shared/_Layout.cshtml";
+    }
+}
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<div id="app" class="page_container">
+    <div class="filters">
+        <!-- Price Filter -->
+        <div class="single_filter">
+            <span>Min Price:</span>
+            <select v-model.number="minPrice">
+                <option value="all">All</option>
+                <option v-for="price in minPriceOptions" :value="price">{{ price.toLocaleString() }} €</option>
+            </select>
+
+            <span>Max Price:</span>
+            <select v-model.number="maxPrice">
+                <option value="all">All</option>
+                <option v-for="price in maxPriceOptions" :value="price">{{ price.toLocaleString() }} €</option>
+            </select>
+        </div>
+            
+        <!-- Square Meter Living Filter -->
+        <div class="single_filter">
+            <span>Min Square Meter Living:</span>
+            <select v-model.number="minSqMLiving">
+                <option value="all">All</option>
+                <option v-for="sq in minSqMLivingOptions" :value="sq">{{ sq }} m²</option>
+            </select>
+
+            <span>Max Square Meter Living:</span>
+            <select v-model.number="maxSqMLiving">
+                <option value="all">All</option>
+                <option v-for="sq in maxSqMLivingOptions" :value="sq">{{ sq }} m²</option>
+            </select>
+        </div>
+            
+        <!-- Square Meter Property Filter -->
+        <div class="single_filter">
+            <span>Min Square Meter Property:</span>
+            <select v-model.number="minSqMProperty">
+                <option value="all">All</option>
+                <option v-for="sq in minSqMPropertyOptions" :value="sq">{{ sq }} m²</option>
+            </select>
+
+            <span>Max Square Meter Property:</span>
+            <select v-model.number="maxSqMProperty">
+                <option value="all">All</option>
+                <option v-for="sq in maxSqMPropertyOptions" :value="sq">{{ sq }} m²</option>
+            </select>
+        </div>
+
+        <!-- Bedrooms Filter -->
+        <div class="single_filter">
+            <span>Bedrooms:</span>
+            <select v-model.number="bedrooms">
+                <option value="all">All</option>
+                <option v-for="bed in bedroomOptions" :value="bed">{{ bed }}</option>
+            </select>
+        </div>
+            
+        <!-- Bathrooms Filter -->
+        <div class="single_filter">
+            <span>Bathrooms:</span>
+            <select v-model.number="bathrooms">
+                <option value="all">All</option>
+                <option v-for="bath in bathroomOptions" :value="bath">{{ bath }}</option>
+            </select>
+        </div>
+            
+        <!-- City Filter -->
+        <div class="single_filter">
+            <span>City:</span>
+            <input type="text" v-model="city" placeholder="Type a city"/>
+        </div>
+
+        <!-- Construction Year Filter -->
+        <div class="single_filter">
+            <span>Min Construction Year:</span>
+            <select v-model.number="minYear">
+                <option value="all">All</option>
+                <option v-for="year in minYearOptions" :value="year">{{ year }}</option>
+            </select>
+
+            <span>Max Construction Year:</span>
+            <select v-model.number="maxYear">
+                <option value="all">All</option>
+                <option v-for="year in maxYearOptions" :value="year">{{ year }}</option>
+            </select>
+        </div>
+            
+        <!-- IsSold Filter -->
+        <div class="single_filter">
+            <span>Is Sold:</span>
+            <select v-model="isSold">
+                <option value="all">All</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="houses">
+        <a v-for="house in filteredHouses" :key="house.houseId" class="houseCard" :href="`/HouseDetails?id=${house.houseId}`">
+            <div class="card">
+                <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                        <img class="houseImg" :src="'/images/house/' + house.houseId + '/' + house.houseId + '_1.jpg'" alt="Card image cap" />
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">{{ house.address }}</h4>
+                        <h6 class="card-subtitle">{{ house.city }}</h6>
+                        <span class="price">&#8364;{{ house.price.toLocaleString() }},-</span>
+                        <p class="card-text">
+                            <span class="info"><i class="fa-solid fa-expand"></i>{{ house.squareMeterLiving }}</span>
+                            <span class="info"><i class="fa-solid fa-bed"></i>{{ house.bedrooms }}</span>
+                            <span class="info"><i class="fa-solid fa-bath"></i>{{ house.bathrooms }}</span>
+                            <span class="info"><i class="fa-solid fa-bolt"></i>{{ house.energyLabel }}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            houses: [],
+            minPrice: 'all',
+            maxPrice: 'all',
+            minPriceOptions: [],
+            maxPriceOptions: [],
+            minSqMLiving: 'all',
+            maxSqMLiving: 'all',
+            minSqMLivingOptions: [],
+            maxSqMLivingOptions: [],
+            minSqMProperty: 'all',
+            maxSqMProperty: 'all',
+            minSqMPropertyOptions: [],
+            maxSqMPropertyOptions: [],
+            bedrooms: 'all',
+            bedroomOptions: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+            bathrooms: 'all',
+            bathroomOptions: [1, 2, 3, 4, 5],
+            city: '',
+            minYear: 'all',
+            maxYear: 'all',
+            minYearOptions: [],
+            maxYearOptions: [],
+            isSold: 'all'
+        },
+        computed: {
+            filteredHouses() {
+                const currentYear = new Date().getFullYear();
+                const maxPriceValue = this.maxPrice === 'all' ? Infinity : this.maxPrice;
+                const maxSqMLivingValue = this.maxSqMLiving === 'all' ? Infinity : this.maxSqMLiving;
+                const maxSqMPropertyValue = this.maxSqMProperty === 'all' ? Infinity : this.maxSqMProperty;
+                const maxYearValue = this.maxYear === 'all' ? currentYear : this.maxYear;
+
+                return this.houses.filter(house => {
+                    return (this.minPrice === 'all' || house.price >= this.minPrice) &&
+                        (this.maxPrice === 'all' || house.price <= maxPriceValue) &&
+                        (this.minSqMLiving === 'all' || house.squareMeterLiving >= this.minSqMLiving) &&
+                        (this.maxSqMLiving === 'all' || house.squareMeterLiving <= maxSqMLivingValue) &&
+                        (this.minSqMProperty === 'all' || house.squareMeterProperty >= this.minSqMProperty) &&
+                        (this.maxSqMProperty === 'all' || house.squareMeterProperty <= maxSqMPropertyValue) &&
+                        (this.bedrooms === 'all' || house.bedrooms === this.bedrooms) &&
+                        (this.bathrooms === 'all' || house.bathrooms === this.bathrooms) &&
+                        house.city.toLowerCase().includes(this.city.toLowerCase()) &&
+                        (this.minYear === 'all' || house.constructionYear >= this.minYear) &&
+                        (this.maxYear === 'all' || house.constructionYear <= maxYearValue) &&
+                        (this.isSold === 'all' || house.isSold.toString() === this.isSold);
+                });
+            }
+        },
+        mounted() {
+            this.fetchHouses();
+            this.generatePriceOptions();
+            this.generateSquareMeterOptions();
+            this.generateYearOptions();
+        },
+        methods: {
+            fetchHouses() {
+                axios.get('/Listings?handler=HouseJsonResult')
+                    .then(response => {
+                        this.houses = response.data;
+                    })
+                    .catch(error => {
+                        console.error("There was an error fetching the house data!", error);
+                    });
+            },
+            generatePriceOptions() {
+                for (let price = 100000; price <= 5000000; price += 100000) {
+                    this.minPriceOptions.push(price);
+                }
+                for (let price = 100000; price <= 10000000; price += 100000) {
+                    this.maxPriceOptions.push(price);
+                }
+            },
+            generateSquareMeterOptions() {
+                for (let sq = 50; sq <= 200; sq += 10) {
+                    this.minSqMLivingOptions.push(sq);
+                }
+                this.minSqMLivingOptions.push(250, 300);
+
+                for (let sq = 100; sq <= 300; sq += 50) {
+                    this.maxSqMLivingOptions.push(sq);
+                }
+                this.maxSqMLivingOptions.push(350, 400);
+
+                for (let sq = 150; sq <= 5000; sq += 100) {
+                    this.minSqMPropertyOptions.push(sq);
+                }
+
+                for (let sq = 200; sq <= 10000; sq += 100) {
+                    this.maxSqMPropertyOptions.push(sq);
+                }
+            },
+            generateYearOptions() {
+                const currentYear = new Date().getFullYear();
+                for (let year = 1800; year <= currentYear; year += 10) {
+                    this.minYearOptions.push(year);
+                }
+                for (let year = 1850; year <= currentYear; year += 10) {
+                    this.maxYearOptions.push(year);
+                }
+            }
+        }
+    });
+</script>
+
+
+<style>
+    .page_container{
+        position:relative;
+        width: 1200px;
+        height: 1300px;
+        padding: 50px 0px;
+        margin:auto;
+    }
+
+    .filters{
+        width: 30%;
+        float:left;
+        background-color: #08213f;
+
+    }
+
+    .houses{
+        width: 70%;
+        float:right;
+        padding-left:20px;
+    }
+
+    .houses a{
+        text-decoration: none!important;
+        color:black!important;
+    }
+
+    .card {
+        margin: 15px 0px;
+    }
+
+    .card-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-horizontal {
+        display: flex;
+        flex: 1 1 auto;
+    }
+
+    .price{
+        font-size:18px;
+        font-weight:700;
+    }
+
+    .fa-solid{
+        color: #08213f;
+        padding-right: 5px;
+    }
+
+    .info{
+        padding-right:10px;
+    }
+
+    .img-square-wrapper img{
+        width: 300px;   
+        height: auto;
+    }      
+
+    .filters{
+        color:white;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+    }
+
+    .single_filter{
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0px;
+    }
+
+    .pagination{
+        float:left;
+        postition:relative;
+    }
+    </style>

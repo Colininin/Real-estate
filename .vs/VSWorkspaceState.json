@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WebApp",
+    "\\WebApp\\obj",
+    "\\WebApp\\obj\\publish",
+    "\\WebApp\\obj\\publish\\win-x64",
+    "\\WebApp\\Pages",
+    "\\WebApp\\Properties",
+    "\\WebApp\\wwwroot",
+    "\\WebApp\\wwwroot\\js",
+    "\\WebApp\\wwwroot\\lib"
+  ],
+  "SelectedNode": "\\MiCasa.sln",
+  "PreviewInSolutionExplorer": false
+}

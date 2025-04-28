@@ -1,0 +1,141 @@
+﻿@page
+@using ClassLib.Classes;
+@model EditListingModel
+@{
+    ViewData["Title"] = "Edit listing";
+
+    if (@Model.loggedin == true)
+    {
+        Layout = "Shared/_LayoutLoggedin.cshtml";
+    }
+    else
+    {
+        Layout = "Shared/_Layout.cshtml";
+    }
+}
+<partial name="_ValidationScriptsPartial" />
+<div class="form">
+    <form class="edithouse" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="houseId" value="@Model.thisHouse.GetHouseId()"/>
+        <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+                <label asp-for="HouseInfo.Price">New price</label>
+                <span asp-validation-for="HouseInfo.Price"></span>
+                <input type="number" asp-for="HouseInfo.Price" value="@Model.thisHouse.GetPrice()"/>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+                <label asp-for="HouseInfo.Address">New address</label>
+                <span asp-validation-for="HouseInfo.Address"></span>
+                <input type="text" asp-for="HouseInfo.Address" value="@Model.thisHouse.GetAddress()"/>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+                <label asp-for="HouseInfo.City">New city</label>
+                <span asp-validation-for="HouseInfo.City"></span>
+                <input type="text" asp-for="HouseInfo.City" value="@Model.thisHouse.GetCity()"/>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+                <label asp-for="HouseInfo.SqmLiving">New SqmLiving</label>
+                <span asp-validation-for="HouseInfo.SqmLiving"></span>
+                <input type="number" asp-for="HouseInfo.SqmLiving" value="@Model.thisHouse.GetSqMLiving()"/>
+            </div>
+        </div>
+        <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+                <label asp-for="HouseInfo.SqmProperty">New SqmProperty</label>
+                <span asp-validation-for="HouseInfo.SqmProperty"></span>
+                <input type="number" asp-for="HouseInfo.SqmProperty" value="@Model.thisHouse.GetSqMProperty()"/>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+                <label asp-for="HouseInfo.Volume">New volume</label>
+                <span asp-validation-for="HouseInfo.Volume"></span>
+                <input type="number" asp-for="HouseInfo.Volume" value="@Model.thisHouse.GetVolume()"/>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+                <label asp-for="HouseInfo.Bedrooms">New bedrooms</label>
+                <span asp-validation-for="HouseInfo.Bedrooms"></span>
+                <input type="number" asp-for="HouseInfo.Bedrooms" value="@Model.thisHouse.GetBedrooms()"/>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+                <label asp-for="HouseInfo.Bathrooms">New bathrooms</label>
+                <span asp-validation-for="HouseInfo.Bathrooms"></span>
+                <input type="number" asp-for="HouseInfo.Bathrooms" value="@Model.thisHouse.GetBathrooms()"/>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+                <label asp-for="HouseInfo.Floors">New floors</label>
+                <span asp-validation-for="HouseInfo.Floors"></span>
+                <input type="number" asp-for="HouseInfo.Floors" value="@Model.thisHouse.GetFloors()"/>
+            </div>
+        </div>
+
+        <label asp-for="HouseInfo.EnergyLabel">EnergyLabel</label>
+        <select asp-for="HouseInfo.EnergyLabel" asp-items="Html.GetEnumSelectList<EnergyLabel>()"></select>
+        <span asp-validation-for="HouseInfo.EnergyLabel"></span>
+
+        <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+                <label asp-for="HouseInfo.Description">New description</label>
+                <span asp-validation-for="HouseInfo.Description"></span>
+                <input type="text" asp-for="HouseInfo.Description" value="@Model.thisHouse.GetDescription()"/>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+                <label asp-for="HouseInfo.ConstructionYear">New Construction Year</label>
+                <span asp-validation-for="HouseInfo.ConstructionYear"></span>
+                <input type="number" asp-for="HouseInfo.ConstructionYear" value="@Model.thisHouse.GetConstructionYear()"/>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+                <label asp-for="HouseInfo.Type">New Type</label>
+                <span asp-validation-for="HouseInfo.Type"></span>
+                <input type="text" asp-for="HouseInfo.Type" value="@Model.thisHouse.GetType()"/>
+            </div>
+        </div>
+
+        <label asp-for="HouseInfo.IsSold">Status</label>
+        <select asp-for="HouseInfo.IsSold">
+            <option value="True">Sold</option>
+            <option value="False">Available</option>
+        </select>
+        <span asp-validation-for="HouseInfo.IsSold"></span>
+        <br/>
+        <input type="submit" value="Submit"/>
+    </form>
+    
+</div>

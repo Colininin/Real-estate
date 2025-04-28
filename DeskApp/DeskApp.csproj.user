@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="ConfirmDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CreateHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="houseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="HousePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Houses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Landingform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

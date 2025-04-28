@@ -1,0 +1,99 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebApp
+build_property.RootNamespace = WebApp
+build_property.ProjectDir = F:\Fontys\Portfolio\github-folders\Real-estate\WebApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = F:\Fontys\Portfolio\github-folders\Real-estate\WebApp
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/Account.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/EditListing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdExpc3RpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/houseDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcaG91c2VEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/Listings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGluZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1lnhnt7yf2
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/Shared/_LayoutHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXRIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-bbz2o3wzo7
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/Shared/_LayoutHomeLoggedin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXRIb21lTG9nZ2VkaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-d2todwdujj
+
+[F:/Fontys/Portfolio/github-folders/Real-estate/WebApp/Pages/Shared/_LayoutLoggedin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXRMb2dnZWRpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-f2bh7vy89h

@@ -1,0 +1,361 @@
+{
+  "Files": [
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\WebApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WebApp.bundle.scp.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\beachHouse.jpg",
+      "PackagePath": "staticwebassets\\images\\beachHouse.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\countrySideHoues.jpg",
+      "PackagePath": "staticwebassets\\images\\countrySideHoues.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\headerIMG1.jpg",
+      "PackagePath": "staticwebassets\\images\\headerIMG1.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\2\\2_1.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\2\\2_1.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\2\\2_2.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\2\\2_2.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\2\\2_3.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\2\\2_3.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\2\\2_4.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\2\\2_4.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\2\\2_5.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\2\\2_5.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\2\\2_6.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\2\\2_6.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\3\\3_1.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\3\\3_1.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\3\\3_2.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\3\\3_2.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\3\\3_3.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\3\\3_3.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\3\\3_4.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\3\\3_4.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\3\\3_5.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\3\\3_5.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\3\\3_6.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\3\\3_6.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\9\\9_1.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\9\\9_1.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\9\\9_2.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\9\\9_2.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\9\\9_3.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\9\\9_3.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\9\\9_4.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\9\\9_4.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\9\\9_5.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\9\\9_5.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\9\\9_6.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\9\\9_6.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\9\\9_7.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\9\\9_7.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\9\\9_8.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\9\\9_8.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\images\\house\\placeHolder\\placeholder.jpg",
+      "PackagePath": "staticwebassets\\images\\house\\placeHolder\\placeholder.jpg"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "X:\\Fontys\\sem2\\realEstate\\Project\\MiCasa\\WebApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.WebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.WebApp.props",
+      "PackagePath": "build\\WebApp.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebApp.props",
+      "PackagePath": "buildMultiTargeting\\WebApp.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebApp.props",
+      "PackagePath": "buildTransitive\\WebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
