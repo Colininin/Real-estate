@@ -1,0 +1,9 @@
+# Mark Bootstrap files as vendored
+bootstrap/** linguist-vendored
+vendor/bootstrap/** linguist-vendored
+node_modules/bootstrap/** linguist-vendored
+
+**/bootstrap.min.css linguist-vendored
+**/bootstrap.min.js linguist-vendored
+**/bootstrap.css linguist-vendored
+**/bootstrap.js linguist-vendored
