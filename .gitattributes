@@ -2,6 +2,7 @@
 bootstrap/** linguist-vendored
 vendor/bootstrap/** linguist-vendored
 node_modules/bootstrap/** linguist-vendored
+css/** linguist-vendored
 
 **/bootstrap.min.css linguist-vendored
 **/bootstrap.min.js linguist-vendored
